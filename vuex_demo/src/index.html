@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="assets/ionic/css/ionic.css">
+    <title></title>
+    <style>
+        .box span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: gainsboro;
+            font-weight: bold;
+        }
+
+        .box span input{
+
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border:1px solid grey;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <header class="bar bar-header bar-assertive">
+        <span class="title">购物车</span>
+    </header>
+
+    <header class="bar bar-subheader bar-dark">
+        <span class="title">商品数量：{{totalNum}} 总金额: {{totalMoney}}</span>
+    </header>
+    <section class="content scroll-content overflow-scroll has-header has-footer has-subheader">
+        <ul class="list">
+            <li v-for="(c,index) in goodsList" class="item item-thumbnail-left"  >
+                <img :src="c.pic" />
+                <h3>{{c.title}}</h3>
+                <p>单价: {{c.price}}</p>
+                <p class="box">数量:
+                    <span @click="minNum(index)">-</span>
+                    <span><input type="number" v-model="c.qal"></span>
+                    <span @click="addNum(index)">+</span>
+                </p>
+            </li>
+
+        </ul>
+    </section>
+    <footer class="tabs tabs-dark tabs-icon-top">
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item has-badge">
+            <i class="badge badge-assertive">{{totalNum}}</i>
+            <i class="icon ion-ios-home"></i>
+            购物车
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+    </footer>
+
+</div>
+<script src="assets/vue.js"></script>
+<script src="ShopCarts.js"></script>
+</body>
+</html>

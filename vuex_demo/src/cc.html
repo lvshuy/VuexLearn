@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="assets/ionic/css/ionic.css">
+    <title></title>
+    <style>
+        .box span{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: gainsboro;
+            font-weight: bold;
+        }
+
+        .box span input{
+
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border:1px solid grey;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <header class="bar bar-header bar-assertive">
+        <span class="title">购物车</span>
+    </header>
+
+    <header class="bar bar-subheader bar-dark">
+        <span class="title">商品数量：0 总金额: 0</span>
+    </header>
+    <section class="content scroll-content overflow-scroll has-header has-footer has-subheader">
+        <ul class="list">
+            <li  class="item item-thumbnail-left"  >
+                <img  />
+                <h3>hhh</h3>
+                <p>单价: 56</p>
+                <p class="box">数量:
+                    <span >-</span>
+                    <span><input type="number" ></span>
+                    <span >+</span>
+                </p>
+            </li>
+
+        </ul>
+    </section>
+    <footer class="tabs tabs-dark tabs-icon-top">
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+        <div class="tab-item has-badge">
+            <i class="badge badge-assertive">0</i>
+            <i class="icon ion-ios-home"></i>
+            购物车
+        </div>
+        <div class="tab-item">
+            <i class="icon ion-ios-home"></i>
+            首页
+        </div>
+    </footer>
+
+</div>
+<script src="assets/vue.js"></script>
+<script src="ShopCarts.js"></script>
+</body>
+</html>
