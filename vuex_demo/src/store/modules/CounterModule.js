@@ -16,9 +16,18 @@ export default {
     actions:{
         ADD:(store,args)=>{
             //逻辑 , api
-            store.commit("INC",args)
+            setTimeout(()=>{
+                // 设置2秒后执行ADD操作
+                store.commit("INC",args)
+            },2000)     
         }
     },
+    // actions:{
+    //     ADD:(store,args)=>{
+    //         //逻辑 , api
+    //         store.commit("INC",args)
+    //     }
+    // },
     //通过getters来访问状态
     getters:{
         GETNUM:(state)=>{
