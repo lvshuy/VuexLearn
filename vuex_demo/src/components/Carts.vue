@@ -9,7 +9,7 @@
         </header>
         <section class="content scroll-content overflow-scroll has-header has-footer has-subheader">
             <ul class="list">
-                <li v-for="n in list"  class="item item-thumbnail-left"  >
+                <li v-for="n in list"  class="item item-thumbnail-left" >
                     <img  :src="n.pic"/>
                     <h3>{{n.title}}</h3>
                     <p>单价: {{n.pric}}</p>

@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <!-- <HelloWorld/> -->
-    <counter></counter>
+    <!-- <counter></counter> -->
     <carts></carts>
   </div>
 </template>
